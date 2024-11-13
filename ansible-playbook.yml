@@ -13,7 +13,7 @@
     command : sudo systemctl start docker
     
   - name : stop existing container
-    shell : docker stop $(docker ps -a -q)
+    shell : docker container stop $(docker ps -a -q)
     
   - name : kill all container
     shell : docker rm $(docker ps -a -q)
