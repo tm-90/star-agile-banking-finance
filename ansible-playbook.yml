@@ -12,9 +12,6 @@
   - name : Start Docker Service
     command : sudo systemctl start docker
     
-  - name : stop existing container
-    shell : docker container stop docker ps -a
-    
   - name : kill all container
     shell : docker rm docker ps -a
 
