@@ -13,10 +13,10 @@
     command : sudo systemctl start docker
     
   - name : stop existing container
-    shell : docker container stop $(docker ps -a -q)
+    shell : docker container stop docker ps -a -q
     
   - name : kill all container
-    shell : docker rm $(docker ps -a -q)
+    shell : docker rm docker ps -a -q
 
   - name: Deploy Docker Container
     command: docker run -itd -p 8084:8081 tanmay216/banking-finance-project:1.0
